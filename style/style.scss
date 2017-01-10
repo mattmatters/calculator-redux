@@ -1,0 +1,64 @@
+// Config
+
+h1, h2, h3 {
+  font-family: 'Lobster', cursive;
+}
+
+a, p, li {
+  font-family: 'Raleway', cursive;
+}
+
+// Classes
+
+.navbar {
+  width: 100%;
+  background-color: yellow;
+}
+
+.navbar-header  {
+  font-family: 'Lobster', cursive;
+}
+
+.display-box {
+  padding-top: 60px;
+}
+
+.list-header {
+  background-color: orange;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.item-list li {
+  list-style-type: none;
+}
+
+.item-list li:nth-child(even) {
+  background-color: #CCC;
+}
+
+.item-list li:nth-child(even):hover {
+  background-color: #CCF;
+}
+
+.item-list li:nth-child(odd) {
+  background-color: #FFF;
+}
+
+.item-list li:nth-child(odd):hover {
+  background-color: #FFC;
+}
+
+
+// Utility classes
+.center {
+  margin: 0 auto;
+}
+
+.fill-parent {
+  width: 100%;
+}
+
+.img-profile {
+  max-width: 50px;
+  max-height: 50px;
+}

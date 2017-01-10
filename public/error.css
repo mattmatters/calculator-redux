@@ -1,0 +1,39 @@
+p,
+h1,
+h2,
+h3,
+li,
+a {
+  color: white;
+}
+
+.bg-box {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 25px;
+  border-radius: 25px;
+  max-width: 400px;
+}
+
+.inline-list {
+  display:flex;
+  list-style:none;
+}
+
+.inline-list li {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.bg-image {
+  background-image: url("red-riding-hood.gif");
+}
+
+.bg-fixed {
+  background-attachement: fixed;
+}
+
+.full-page {
+  position: relative;
+  height: 100vh;
+
+}
