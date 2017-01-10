@@ -48,6 +48,35 @@ a, p, li {
   background-color: #FFC;
 }
 
+button {
+  border-radius: 20px;
+  text-align: center;
+  font-size: 20px;
+  padding: 15px;
+  color: white;
+  width: 60px;
+  border-style: none;
+}
+
+button:active {
+  background-color: grey;
+}
+
+.btn-num {
+  background-color: #555555;
+}
+
+.btn-equals {
+  background-color: green;
+}
+
+.btn-clear {
+  background-color: red;
+}
+
+.btn-operator {
+  background-color: blue;
+}
 
 // Utility classes
 .center {
@@ -61,4 +90,11 @@ a, p, li {
 .img-profile {
   max-width: 50px;
   max-height: 50px;
+}
+
+.app {
+  max-width: 500px;
+  border-radius: 15px;
+  background-color: grey;
+  padding: 20px;
 }

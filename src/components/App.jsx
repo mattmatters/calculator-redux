@@ -4,7 +4,7 @@ import ButtonPad from '../containers/buttonPadContainer';
 
 // eslint-disable-next-line
 const App = () => (
-  <div className="App container">
+  <div className="app container">
     <Display />
     <ButtonPad />
   </div>
