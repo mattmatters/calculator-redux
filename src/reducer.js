@@ -91,13 +91,13 @@ const calculatorReducer = (state = initialState, action) => {
       switch (state.stage) {
         case stageStates.cleared:
           return Object.assign({}, state, {
-            numStringOne: parseInt(state.numStringOne || '0', 10) * 2,
+            numStringOne: (parseInt(state.numStringOne || '0', 10) * 2).toString(),
             numStringTwo: '',
             operator: '',
           });
         case stageStates.numOne:
           return Object.assign({}, state, {
-            numStringOne: parseInt(state.numStringOne || '0', 10) * 2,
+            numStringOne: (parseInt(state.numStringOne || '0', 10) * 2).toString(),
             numStringTwo: '',
             operator: '',
           });
