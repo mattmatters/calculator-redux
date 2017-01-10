@@ -1,3 +1,7 @@
+// Constants
+$screen-background: #e6e600;
+$btn-font-color: white;
+
 // Config
 
 h1, h2, h3 {
@@ -8,52 +12,23 @@ a, p, li {
   font-family: 'Raleway', cursive;
 }
 
+// Effects
+@keyframes flicker{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      opacity:random();
+    }
+  }
+}
+
 // Classes
-
-.navbar {
-  width: 100%;
-  background-color: yellow;
-}
-
-.navbar-header  {
-  font-family: 'Lobster', cursive;
-}
-
-.display-box {
-  padding-top: 60px;
-}
-
-.list-header {
-  background-color: orange;
-  border-radius: 20px 20px 0px 0px;
-}
-
-.item-list li {
-  list-style-type: none;
-}
-
-.item-list li:nth-child(even) {
-  background-color: #CCC;
-}
-
-.item-list li:nth-child(even):hover {
-  background-color: #CCF;
-}
-
-.item-list li:nth-child(odd) {
-  background-color: #FFF;
-}
-
-.item-list li:nth-child(odd):hover {
-  background-color: #FFC;
-}
-
 button {
   border-radius: 20px;
   text-align: center;
   font-size: 20px;
   padding: 15px;
-  color: white;
+  color: $btn-font-color;
   width: 60px;
   border-style: none;
 }
@@ -77,6 +52,49 @@ button:active {
 .btn-operator {
   background-color: blue;
 }
+
+.display {
+  background-color: #e6e600;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  padding: 5px;
+  margin: 3px;
+
+  // https://codepen.io/lbebber/pen/XJRdrV//
+  // flicker
+  &::after{
+    content:" ";
+    display:block;
+    background:transparentize($screen-background,0.9);
+    opacity:0;
+    z-index:2;
+    pointer-events:none;
+  }
+  &::after{
+    animation: flicker 0.15s infinite;
+  }
+  // scanlines
+  &::before{
+    content:" ";
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background:linear-gradient(transparentize($screen-background,1) 50%, transparentize(darken($screen-background,10),0.75) 50%), linear-gradient(90deg,transparentize(#ff0000,0.94),transparentize(#00ff00,0.98),transparentize(#0000ff,0.94));
+    z-index:2;
+    background-size:100% 2px, 3px 100%;
+    pointer-events:none;
+  }
+}
+
+.display p {
+  font-family: 'VT323', monospace;
+  font-size: 30px;
+}
+
 
 // Utility classes
 .center {

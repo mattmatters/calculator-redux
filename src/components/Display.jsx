@@ -7,7 +7,7 @@ const propTypes = {
 };
 
 const Display = ({ operator, numStringOne, numStringTwo }) => (
-  <div className="row">
+  <div className="row display">
     <div className="col-xs-2 text-left">
       <p> {!operator.length ? 'c' : operator } </p>
     </div>
