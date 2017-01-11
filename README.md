@@ -2,7 +2,6 @@
 
 This is a fully functioning chain-based calculator.  This was made primarily for myself as an exercise in using redux's state management combined with React's rendering capabilities.
 
-<iframe width="500" height="800" src="https://mattmatters.github.io/calculator-redux/" frameborder="0" />
 
 ## Installation
 
