@@ -73,7 +73,9 @@ button:active {
     pointer-events:none;
   }
   &::after{
-    animation: flicker 0.15s infinite;
+    animation-name: flicker;
+    animation-duration: 0.15s ;
+    animation-iteration-count: infinite;
   }
   // scanlines
   &::before{
