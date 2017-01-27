@@ -119,15 +119,6 @@ module.exports = {
       // in the main CSS file.
       {
         test: /\.css$/,
-        loader: 'style!css?importLoaders=1!postcss',
-      },
-      {
-        test: /\.scss$/,
-        loader: 'style!css?importLoaders=1!postcss!sass',
-      },
-
-/*      {
-        test: /\.css$/,
         // "?-autoprefixer" disables autoprefixer in css-loader itself:
         // https://github.com/webpack/css-loader/issues/281
         // We already have it thanks to postcss. We only pass this flag in
@@ -136,10 +127,13 @@ module.exports = {
         // Webpack 1.x uses Uglify plugin as a signal to minify *all* the assets
         // including CSS. This is confusing and will be removed in Webpack 2:
         // https://github.com/webpack/webpack/issues/283
-        loader: ExtractTextPlugin.extract('style', 'css?importLoaders=1&-autoprefixer!postcss')
+        loader: ExtractTextPlugin.extract('style', 'css?importLoaders=1&-autoprefixer!postcss'),
         // Note: this won't work without `new ExtractTextPlugin()` in `plugins`.
       },
-      */
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract('style', 'css?importLoaders=1&-autoprefixer!postcss!sass?includePaths[]=' + path.resolve(__dirname, '../node_modules/compass-mixins/lib')),
+      },
       // JSON is not enabled by default in Webpack but both Node and Browserify
       // allow it implicitly so we also enable it.
       {

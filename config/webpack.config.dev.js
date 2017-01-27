@@ -120,7 +120,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: 'style!css?importLoaders=1!postcss!sass',
+        loader: 'style!css?importLoaders=1!postcss!sass?includePaths[]=' + path.resolve(__dirname, '../node_modules/compass-mixins/lib'),
       },
       // JSON is not enabled by default in Webpack but both Node and Browserify
       // allow it implicitly so we also enable it.
