@@ -67,7 +67,7 @@ const ButtonPad = ({ equals, clear, appendChar, setOperator }) => (
     </div>
     <div className="row">
       <div className="col-xs-3">
-        <button> (-) </button>
+        <button onClick={() => appendChar('-')}> (-) </button>
       </div>
       <div className="col-xs-3">
         <button className="btn-num" onClick={() => appendChar('0')}> 0 </button>

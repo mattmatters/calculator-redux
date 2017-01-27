@@ -34,6 +34,25 @@ const getResult = (num1, num2, operator) => {
 const calculatorReducer = (state = initialState, action) => {
   switch (action.type) {
     case APPEND_CHAR:
+      if (action.char === '-') {
+        switch (state.stage) {
+          case stageStates.cleared:
+            return Object.assign({}, state, {
+              stage: stageStates.numOne,
+              numStringOne: action.char,
+            });
+          case stageStates.numOne:
+            return Object.assign({}, state, {
+              numStringOne: action.char.concat(state.numStringTwo),
+            });
+          case stageStates.numTwo:
+            return Object.assign({}, state, {
+              numStringTwo: action.char.concat(state.numStringTwo.concat),
+            });
+          default:
+            return state;
+        }
+      }
       switch (state.stage) {
         case stageStates.cleared:
           return Object.assign({}, state, {
