@@ -1366,6 +1366,10 @@ compass:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/compass/-/compass-0.1.1.tgz#5c56d5eb442d10c1ad5989ef5c5e925db60c60e1"
 
+compass-mixins:
+  version "0.12.10"
+  resolved "https://registry.yarnpkg.com/compass-mixins/-/compass-mixins-0.12.10.tgz#cd9f15f829c4e960cc43bb226f049b28beb99d41"
+
 compressible@~2.0.8:
   version "2.0.9"
   resolved "https://registry.yarnpkg.com/compressible/-/compressible-2.0.9.tgz#6daab4e2b599c2770dd9e21e7a891b1c5a755425"
