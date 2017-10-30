@@ -5,12 +5,10 @@ This is a fully functioning chain-based calculator.  This was made primarily for
 
 ## Installation
 
-Assuming you already have yarn:
-
 ```sh
 git clone "https://github.com/mattmatters/calculator-redux.git"
 cd calculator-redux
-yarn install
+npm install
 ```
 
-Upon installing you may type `yarn start` to run the application through a dev server.
+Upon installing you may type `npm start` to run the application through a dev server.
