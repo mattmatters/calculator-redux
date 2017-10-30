@@ -1,6 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies,
    no-unused-expressions, react/jsx-filename-extension */
-import { shallow } from 'enzyme';
 import { describe, it } from 'mocha';
 import { should } from 'chai';
 import React from 'react';
@@ -13,12 +12,6 @@ import {
        } from '../src/actions';
 
 should();
-/*
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-});
-*/
 
 // Actions
 describe('Actions', () => {
@@ -64,36 +57,13 @@ describe('Reducers', () => {
       calculatorReducer(
         calculatorReducer(
           calculatorReducer(
-            calculatorReducer(initialState, { type: APPEND_CHAR, char: '1' }),
-            { type: SET_OPERATOR, operator: '+' },
+            calculatorReducer(initialState, appendChar('1')),
+            setOperator('+')
           ),
-          { type: APPEND_CHAR, char: '1' },
+          appendChar('1')
         ),
-        { type: EQUALS },
-      ).should.be.deep.equal(initialState);
+        equals()
+      ).numStringOne.should.be.equal('2');
     });
   });
 });
-
-/*
-// Components
-describe('Components', () => {
-  describe('User', () => {
-    const wrapper = shallow(<User username="poop" lastupdate="never" allTime={23} recent={2} />);
-    it('renders without exploding', () => {
-      wrapper.should.have.length(1);
-    });
-  });
-});
-
-
-// Containers
-describe('Containers', () => {
-  describe('appContainer', () => {
-    it('should map props', () => {
-      mapStateToProps({ mooReducer: { cowText: '' } }).should.be.deep.equal({ text: '' });
-    });
-  });
-});
-
-*/
