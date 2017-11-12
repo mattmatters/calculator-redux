@@ -1,4 +1,11 @@
-# [Calculator-Redux](https://mattmatters.github.io/calculator-redux/) [![Build](https://travis-ci.org/mattmatters/calculator-redux.svg?branch=master)](https://travis-ci.org/mattmatters/calculator-redux)[![Test Coverage](https://api.codeclimate.com/v1/badges/46cafc406b52e43bf14f/test_coverage)](https://codeclimate.com/github/mattmatters/calculator-redux/test_coverage)
+<p align="center"><a href="http://calc-redux.com.s3-website-us-east-1.amazonaws.com/"><img src="calc-2.gif" width="360"></a></p>
+<p align="center">
+  <a href="https://travis-ci.org/mattmatters/calculator-redux"><img src="https://travis-ci.org/mattmatters/calculator-redux.svg?branch=master" alt="Build Status"></a>
+  <a href="https://david-dm.org/mattmatters/calculator-redux"><img src="https://david-dm.org/mattmatters/calculator-redux/status.svg"></a>
+</p>
+<h1 align="center"><a href="http://calc-redux.com.s3-website-us-east-1.amazonaws.com/">Calculator-Redux</a></h1>
+
+**Note** This is a old project, it's kept around for only legacy purposes.
 
 This is a fully functioning chain-based calculator.  This was made primarily for myself as an exercise in using redux's state management combined with React's rendering capabilities.
 
