@@ -11,9 +11,7 @@ const loggerMiddleware = createLogger();
 
 const store = createStore(
   calculatorReducer,
-  applyMiddleware(
-    loggerMiddleware,
-  ),
+  applyMiddleware(loggerMiddleware),
 );
 
 ReactDOM.render(

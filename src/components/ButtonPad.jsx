@@ -7,7 +7,9 @@ const propTypes = {
   setOperator: PropTypes.func.isRequired,
 };
 
-const ButtonPad = ({ equals, clear, appendChar, setOperator }) => (
+const ButtonPad = ({
+  equals, clear, appendChar, setOperator,
+}) => (
   <div>
     <div className="row">
       <div className="col-xs-3">

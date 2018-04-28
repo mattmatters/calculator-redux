@@ -92,10 +92,10 @@ const calculatorReducer = (state = initialState, action) => {
           if (state.numStringTwo.length) {
             return Object.assign({}, state, {
               numStringOne: getResult(
-                                 parseInt(state.numStringOne, 10),
-                                 parseInt(state.numStringTwo, 10),
-                                 state.operator,
-                               ).toString(),
+                parseInt(state.numStringOne, 10),
+                parseInt(state.numStringTwo, 10),
+                state.operator,
+              ).toString(),
               stage: stageStates.numTwo,
               operator: action.operator,
               numStringTwo: '',
@@ -127,10 +127,10 @@ const calculatorReducer = (state = initialState, action) => {
           return Object.assign({}, state, {
             stage: stageStates.cleared,
             numStringOne: getResult(
-                                     parseInt(state.numStringOne, 10),
-                                     parseInt(state.numStringTwo, 10),
-                                     state.operator,
-                                   ).toString(),
+              parseInt(state.numStringOne, 10),
+              parseInt(state.numStringTwo, 10),
+              state.operator,
+            ).toString(),
             numStringTwo: '',
             operator: '',
           });
